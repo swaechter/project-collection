@@ -1,0 +1,14 @@
+<form id="form-project-delete" method="post">
+	<h1>Projekt löschen</h1>
+	<p>Löschen Sie ein bestehendes Projekt. Bitte beachten Sie, dass dies zu fehlerhaften Datensätzen (z.B. in Projekten und Statistiken) führen kann.</p>
+	<div class="form-group">
+		<label>Projekt *</label>
+		<select name="select-project" class="form-control" required>
+			<option value="0">-</option>
+			{{#projects}}
+			<option value="{{idproject}}">{{name}}</option>
+			{{/projects}}
+		</select>
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Löschen</button>
+</form>

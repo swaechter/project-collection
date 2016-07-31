@@ -1,0 +1,4 @@
+===== Binary Package + Installation =====
+- Commit your changes to the GitHub repository
+- Run create_package.sh
+- Install the package with 'sudo pacman -U <packagename>'

@@ -1,0 +1,2 @@
+===== Binary installation =====
+- Run create_package.sh

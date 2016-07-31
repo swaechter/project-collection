@@ -1,0 +1,94 @@
+; ===== Defines =====
+!define APPLICATION_NAME "testapplication"
+!define APPLICATION_VERSION "0.1.0"
+!define PROJECT_ROOT "..\.."
+;!define QT_BINARY_DIR "C:\Qt\Qt5.3.1\5.3\msvc2012_opengl\bin"
+;!define QT_PLUGINS_DIR "C:\Qt\Qt5.3.1\5.3\msvc2012_opengl\plugins"
+
+!ifndef QT_BINARY_DIR
+	!error "QT_BINARY_DIR is not defined"
+!endif
+
+!ifndef QT_PLUGINS_DIR
+	!error "QT_PLUGINS_DIR is not defined"
+!endif
+
+; ===== Includes =====
+!include "MUI2.nsh"
+
+; ===== General =====
+Name "${APPLICATION_NAME} ${APPLICATION_VERSION}"
+OutFile "${APPLICATION_NAME}-${APPLICATION_VERSION}-installer.exe"
+InstallDir "$PROGRAMFILES\${APPLICATION_NAME}"
+SetCompressor "lzma"
+
+; ===== Pages =====
+!insertmacro MUI_PAGE_WELCOME
+!insertmacro MUI_PAGE_LICENSE "..\..\LICENSE.md"
+!insertmacro MUI_PAGE_DIRECTORY
+!insertmacro MUI_PAGE_INSTFILES
+!define MUI_FINISHPAGE_NOAUTOCLOSE
+!define MUI_FINISHPAGE_RUN
+!define MUI_FINISHPAGE_RUN_CHECKED
+!define MUI_FINISHPAGE_RUN_TEXT "Run Application"
+!define MUI_FINISHPAGE_RUN_FUNCTION "RunApplication"
+!insertmacro MUI_PAGE_FINISH
+
+!insertmacro MUI_UNPAGE_WELCOME
+!insertmacro MUI_UNPAGE_CONFIRM
+!insertmacro MUI_UNPAGE_INSTFILES
+!insertmacro MUI_UNPAGE_FINISH
+
+!insertmacro MUI_LANGUAGE "English"
+
+; ===== Installer =====
+Section ""
+	SetOutPath $INSTDIR
+	
+	CreateDirectory $INSTDIR\platforms
+	
+	!ifdef MINGW-MAKE
+		File ${PROJECT_ROOT}\build\output\testapplication.exe
+		File ${PROJECT_ROOT}\build\output\libsharedlibrary.dll
+		File ${QT_BINARY_DIR}\libgcc_s_dw2-1.dll
+		File ${QT_BINARY_DIR}\libstdc++-6.dll
+		File ${QT_BINARY_DIR}\libwinpthread-1.dll
+	!else ifdef MSVC-MSBUILD
+		File ${PROJECT_ROOT}\build\output\Release\testapplication.exe
+		File ${PROJECT_ROOT}\build\output\Release\sharedlibrary.dll
+	!else
+		!error "The compiler platform is not defined. Please run the batch file for your compiler platform"
+	!endif
+	
+	File ${PROJECT_ROOT}\LICENSE.md
+	
+	File ${QT_BINARY_DIR}\Qt5Widgets.dll
+	File ${QT_BINARY_DIR}\Qt5Gui.dll
+	File ${QT_BINARY_DIR}\Qt5Core.dll
+	File ${QT_BINARY_DIR}\icudt52.dll
+	File ${QT_BINARY_DIR}\icuin52.dll
+	File ${QT_BINARY_DIR}\icuuc52.dll
+	
+	SetOutPath $INSTDIR\platforms
+	File ${QT_PLUGINS_DIR}\platforms\qminimal.dll
+	File ${QT_PLUGINS_DIR}\platforms\qwindows.dll
+	
+	SetOutPath $INSTDIR
+	WriteUninstaller $INSTDIR\uninstall.exe
+SectionEnd
+
+; ===== Uninstaller =====
+Section "Uninstall"	
+	Delete $INSTDIR\LICENSE.md
+	Delete $INSTDIR\*.dll
+	Delete $INSTDIR\platforms\*.dll
+	Delete $INSTDIR\testapplication.exe
+	Delete $INSTDIR\uninstall.exe
+	RMDir $INSTDIR\platforms
+	RMDir $INSTDIR
+SectionEnd
+
+; ===== Functions =====
+Function RunApplication
+	ExecShell "" "$INSTDIR\testapplication.exe"
+FunctionEnd

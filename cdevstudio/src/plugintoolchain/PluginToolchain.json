@@ -1,0 +1,4 @@
+{
+	"name": "Toolchain",
+	"description": "The plugin Toolchain provides the whole build & run infrastructure."
+}

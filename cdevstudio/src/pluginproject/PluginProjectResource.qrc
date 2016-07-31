@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="/">
+    <file>data/templatec/CMakeLists.txt</file>
+    <file>data/templatec/main.c</file>
+    <file>data/templatecplusplus/CMakeLists.txt</file>
+    <file>data/templatecplusplus/main.cpp</file>
+  </qresource>
+</RCC>

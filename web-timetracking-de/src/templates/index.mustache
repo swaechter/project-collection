@@ -1,0 +1,26 @@
+﻿<!DOCTYPE  HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Zeiterfassung">
+		<meta name="author" content="Simon Wächter">
+		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<script src="scripts/script.js"></script> 
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="images/favicon.ico" rel="shortcut icon">
+		<link href="{{style}}" rel="stylesheet">
+		<title>Zeiterfassung</title>
+	</head>
+	<body>
+		{{{header}}}
+		<div class="container containercontent">
+			<div id="content">
+				{{#errorstatus}}<div class="alert alert-danger">{{errorstatus}}</div>{{/errorstatus}}
+				{{{content}}}
+			</div>
+			{{{footer}}}
+		</div>
+	</body>
+</html>

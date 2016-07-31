@@ -1,0 +1,14 @@
+<form id="form-user-edit" method="post">
+	<h1>Mitarbeiter bearbeiten</h1>
+	<p>Bearbeiten Sie einen bestehenden Mitarbeiter.</p>
+	<div class="form-group">
+		<label>Name *</label>
+		<select name="select-user" class="form-control" required>
+			<option value="0">-</option>
+			{{#users}}
+			<option value="{{iduser}}">{{firstname}} {{lastname}}</option>
+			{{/users}}
+		</select>
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Bearbeiten</button>
+</form>

@@ -1,0 +1,14 @@
+<form id="form-customer-edit" method="post">
+	<h1>Kunde bearbeiten</h1>
+	<p>Bearbeiten Sie einen bestehenden Kunden.</p>
+	<div class="form-group">
+		<label>Name *</label>
+		<select name="select-customer" class="form-control" required>
+			<option value="0">-</option>
+			{{#customers}}
+			<option value="{{idcustomer}}">{{name}}</option>
+			{{/customers}}
+		</select>
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Bearbeiten</button>
+</form>

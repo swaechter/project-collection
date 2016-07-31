@@ -1,0 +1,29 @@
+# Maintainer: Simon Wächter <waechter.simon@gmail.com>
+
+pkgname=cdevstudio
+pkgver=0.0.8
+pkgrel=8
+pkgdesc="A C/C++ IDE based on the Qt5 framework"
+arch=('i686' 'x86_64')
+url="www.github.com/swaechter/cdevstudio"
+license=('GPL3')
+depends=('pacman' 'qt5-base')
+makedepends=('git' 'cmake' 'qt5-base' 'qt5-tools')
+conflicts=()
+provides=('cdevstudio')
+source=('git+https://github.com/swaechter/cdevstudio.git')
+md5susms=()
+
+build()
+{
+	mkdir -p ${pkgname}/build
+	cd ${pkgname}/build
+	cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr
+	make
+}
+
+package()
+{
+	cd ${pkgname}/build
+	make DESTDIR=${pkgdir} install
+}

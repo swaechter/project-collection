@@ -1,0 +1,14 @@
+<form id="form-work-edit" method="post">
+	<h1>Arbeit bearbeiten</h1>
+	<p>Bearbeiten Sie eine bestehende Arbeit.</p>
+	<div class="form-group">
+		<label>Name *</label>
+		<select name="select-work" class="form-control" required>
+			<option value="0">-</option>
+			{{#works}}
+			<option value="{{idwork}}">{{workdate}} - {{duration}} Minuten - {{name}} - {{description}}</option>
+			{{/works}}
+		</select>
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Bearbeiten</button>
+</form>

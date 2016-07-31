@@ -1,0 +1,23 @@
+<form id="form-statistic-work-user" method="post">
+	<h1>Arbeit ansehen</h1>
+	<p>Übersicht der Arbeit von diesem Jahr.</p>
+	<div class="form-group">
+		<label>Mitarbeiter *</label>
+		<select name="select-user" class="form-control" required>
+			<option value="0">-</option>
+			{{#users}}
+			<option value="{{iduser}}">{{firstname}} {{lastname}}</option>
+			{{/users}}
+		</select>
+	</div>
+	<div class="form-group">
+		<label>Monat *</label>
+		<select name="select-month" class="form-control" required>
+			<option value="0">-</option>
+			{{#months}}
+			<option value="{{month}}">{{month}}</option>
+			{{/months}}
+		</select>
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Ansehen</button>
+</form>

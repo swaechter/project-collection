@@ -1,0 +1,9 @@
+# Project
+.kdev4/
+build/
+doc/html/
+
+# Package
+*.deb
+*.rpm
+*.exe

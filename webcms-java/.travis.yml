@@ -1,0 +1,12 @@
+language: java
+jdk:
+  - oraclejdk8
+
+script:
+  - mvn install
+  - mvn test
+
+notifications:
+  email:
+    on_success: always
+    on_failure: always

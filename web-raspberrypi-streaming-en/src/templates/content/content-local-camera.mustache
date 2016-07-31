@@ -1,0 +1,39 @@
+<h1>Local Camera</h1>
+<form id="form-local-camera-state" method="post">
+	<h3>Status of the local camera</h3>
+	<p>Please choose between one of three states (Off, Streaming and Monitoring).</p>
+	<div class="input-group">
+		<select class="form-control" name="selectlocalcamerastate">
+			{{#modes}}
+			<option {{selected}} value="{{value}}">{{name}}</option>
+			{{/modes}}
+		</select>
+		<div class="input-group-btn">
+			<input type="submit" class="btn btn-primary" value="Set status">
+		</div>
+	</div>
+</form>
+<form id="form-local-camera-stream" method="post">
+	<h3>See stream (Streaming)</h3>
+	<p>Click 'See stream' to see the stream (You will see an error message if the stream is not active or disabled).</p>
+	<div class="input-group">
+		<div class="input-group-btn">
+			<input type="submit" class="btn btn-primary form-control" value="See stream">
+		</div>
+	</div>
+</form>
+<form id="form-local-camera-video" method="post">
+	<h3>See video (Monitoring)</h3>
+	<p>See captured videos, taken in the monitoring mode. Click 'See video' to see the video</p>
+	<div class="input-group">
+		<select class="form-control" name="selectlocalcameramonitoring">
+			<option value="-">-</option>
+			{{#videos}}
+			<option value="{{file}}">{{date}}</option>
+			{{/videos}}
+		</select>
+		<div class="input-group-btn">
+			<input type="submit" class="btn btn-primary" value="See video">
+		</div>
+	</div>
+</form>

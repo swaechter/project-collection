@@ -1,0 +1,3 @@
+===== Binary Package + Installation =====
+- Run create_package.sh
+- Install the package with 'sudo dpkg -i <packagename>'

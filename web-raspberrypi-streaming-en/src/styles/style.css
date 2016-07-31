@@ -1,0 +1,16 @@
+html,body
+{
+	background-color: #eee;
+}
+
+.containercontent
+{
+	background-color: #ffffff;
+	padding-top: 10px;
+	margin-bottom: 50px;
+}
+
+.container .credit
+{
+	margin: 20px 0;
+}

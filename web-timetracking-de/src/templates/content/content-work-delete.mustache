@@ -1,0 +1,14 @@
+<form id="form-work-delete" method="post">
+	<h1>Arbeit löschen</h1>
+	<p>Löschen Sie eine bestehende Arbeit. Bitte beachten Sie, dass dies zu fehlerhaften Datensätzen (z.B. in Projekten und Statistiken) führen kann.</p>
+	<div class="form-group">
+		<label>Arbeit *</label>
+		<select name="select-work" class="form-control" required>
+			<option value="0">-</option>
+			{{#works}}
+			<option value="{{idwork}}">{{workdate}} - {{duration}} Minuten - {{name}} - {{description}}</option>
+			{{/works}}
+		</select>
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Löschen</button>
+</form>

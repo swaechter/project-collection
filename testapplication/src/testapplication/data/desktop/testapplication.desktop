@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=testapplication
+GenericName=A Qt5 sample application
+Exec=testapplication
+Terminal=false

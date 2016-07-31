@@ -1,0 +1,22 @@
+<form id="form-project-edit-panel" method="post">
+	<h1>Projekt bearbeiten</h1>
+	<p>Bearbeiten Sie das ausgewählte Projekt.</p>
+	<div class="form-group">
+		<label>Projekt-ID</label>
+		<input name="idproject" value="{{idproject}}" class="form-control" type="number" maxlength="100" readonly required>
+	</div>
+	<div class="form-group">
+		<label>Name *</label>
+		<input name="name" value="{{name}}" class="form-control" type="text" maxlength="100" required>
+	</div>
+	<div class="form-group">
+		<label>Kunde *</label>
+		<select name="select-customer" class="form-control" required>
+			<option value="0">-</option>
+			{{#customers}}
+			<option value="{{idcustomer}}">{{name}}</option>
+			{{/customers}}
+		</select>
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Bearbeiten</button>
+</form>

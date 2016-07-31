@@ -1,0 +1,25 @@
+<h1>Arbeit</h1>
+<p>Übersicht der Arbeit für einen Kunden während eines bestimmten Zeitraumes.</p>
+<p><b>Verrechnete Kosten:</b> {{moneyout}} <b>Kosten:</b> {{moneyin}} <b>Gewinn:</b> {{moneydifference}}</p>
+<div class="container table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Datum</th>
+				<th>Zeit (Minuten)</th>
+				<th>Mitarbeiter</th>
+				<th>Projekt</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{#works}}
+			<tr>
+				<td>{{workdate}}</td>
+				<td>{{duration}}</td>
+				<td>{{firstname}} {{lastname}}</td>
+				<td>{{name}}</td>
+			</tr>
+			{{/works}}
+		</tbody>
+	</table>
+</div>

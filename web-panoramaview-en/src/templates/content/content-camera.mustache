@@ -1,0 +1,19 @@
+<form id="form-send-request" method="post">
+	<h1>Camera</h1>
+	<h2>Current stream</h2>
+	<OBJECT classid="clsid:9BE31822-FDAD-461B-AD51-BE1D1C159921" codebase="http://downloads.videolan.org/pub/videolan/vlc/latest/win32/axvlc.cab" width="640" height="480" id="vlc" events="True">
+		<param name="Src" value="http://{{ip}}/" />
+		<param name="ShowDisplay" value="True" />
+		<param name="AutoLoop" value="False" />
+		<param name="AutoPlay" value="True" />
+		<embed id="vlcEmb" type="application/x-google-vlc-plugin" version="VideoLAN.VLCPlugin.2" autoplay="yes" loop="no" width="640" height="480" target="rtsp://{{ip}}:{{port}}/live.sdp" />
+	</OBJECT>
+	<h2>Session request</h2>
+	<p>Press the button to make a request to control the camera. This can take some time. You see your status in the table above.</p>
+	<div class="input-group">
+		<input type="text" class="form-control" name="input-username">
+		<div class="input-group-btn">
+			<input type="submit" class="btn btn-primary" value="Send request">
+		</div>
+	</div>
+</form>

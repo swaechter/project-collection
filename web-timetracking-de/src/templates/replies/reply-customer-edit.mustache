@@ -1,0 +1,25 @@
+<form id="form-customer-edit-panel" method="post">
+	<h1>Kunde bearbeiten</h1>
+	<p>Bearbeiten Sie den ausgewählten Kunden.</p>
+	<div class="form-group">
+		<label>Kunden-ID</label>
+		<input name="idcustomer" value="{{idcustomer}}" class="form-control" type="number" maxlength="100" readonly required>
+	</div>
+	<div class="form-group">
+		<label>Name *</label>
+		<input name="name" value="{{name}}" class="form-control" type="text" maxlength="100" required>
+	</div>
+	<div class="form-group">
+		<label>Strasse und Nummer *</label>
+		<input name="adress" value="{{adress}}" class="form-control" type="text" maxlength="100" required>
+	</div>
+	<div class="form-group">
+		<label>Postleitzahl *</label>
+		<input name="townnumber" value="{{townnumber}}" class="form-control" type="number" maxlength="100" required>
+	</div>
+	<div class="form-group">
+		<label>Ortschaft *</label>
+		<input name="town" value="{{town}}" class="form-control" type="text" maxlength="100" required>
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Bearbeiten</button>
+</form>

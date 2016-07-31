@@ -1,0 +1,1 @@
+* * * * * /usr/bin/php /var/www/html/web-panoramaview-en/src/capture.php

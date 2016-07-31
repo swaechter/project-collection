@@ -1,0 +1,4 @@
+libcdevstudioplugins0: package-name-doesnt-match-sonames libpluginprojectexplorer0 libpluginproject0 libplugineditor0
+libcdevstudioplugins0: non-dev-pkg-with-shlib-symlink usr/lib/libpluginproject.so.0.0.8 usr/lib/libpluginproject.so
+libcdevstudioplugins0: non-dev-pkg-with-shlib-symlink usr/lib/libpluginprojectexplorer.so.0.0.8 usr/lib/libpluginprojectexplorer.so
+libcdevstudioplugins0: non-dev-pkg-with-shlib-symlink usr/lib/libplugineditor.so.0.0.8 usr/lib/libplugineditor.so

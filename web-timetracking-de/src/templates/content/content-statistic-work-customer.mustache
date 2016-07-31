@@ -1,0 +1,22 @@
+<form id="form-statistic-work-customer" method="post">
+	<h1>Arbeit für einen Kunden</h1>
+	<p>Übersicht der Arbeit für einen Kunden während eines bestimmten Zeitraumes.</p>
+	<div class="form-group">
+		<label>Kunde *</label>
+		<select name="select-customer" class="form-control" required>
+			<option value="0">-</option>
+			{{#customers}}
+			<option value="{{idcustomer}}">{{name}}</option>
+			{{/customers}}
+		</select>
+	</div>
+	<div class="form-group">
+		<label>Startdatum *</label>
+		<input name="workdatestart" class="form-control" type="date" maxlength="100" required>
+	</div>
+	<div class="form-group">
+		<label>Enddatum *</label>
+		<input name="workdateend" class="form-control" type="date" maxlength="100" required>
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Ansehen</button>
+</form>

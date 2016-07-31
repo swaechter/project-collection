@@ -1,0 +1,41 @@
+<h1>Remote cameras</h1>
+<form id="form-remote-cameras-add" method="post">
+	<h3>Add remote camera</h3>
+	<p>Insert the IP and the port of the remote camera and press 'Add remote camera'.</p>
+	<div class="input-group">
+		<input type="text" class="form-control" name="inputaddremotecamera">
+		<div class="input-group-btn">
+			<input type="submit" class="btn btn-primary" value="Add remote camera">
+		</div>
+	</div>
+</form>
+<form id="form-remote-cameras-remove" method="post">
+	<h3>Remove remote camera</h3>
+	<p>Select an existing camera and press 'Remove remote camera'.</p>
+	<div class="input-group">
+		<select class="form-control" name="selectremoveremotecamera">
+			<option value="-">-</option>
+			{{#cameras}}
+			<option value="{{ip}}">{{ip}}</option>
+			{{/cameras}}
+		</select>
+		<div class="input-group-btn">
+			<input type="submit" class="btn btn-primary" value="Remove remote camera">
+		</div>
+	</div>
+</form>
+<form id="form-remote-cameras-stream" method="post">
+	<h3>See stream (Streaming)</h3>
+	<p>Select an active camera and press 'See stream' to see the stream of a remote camera.</p>
+	<div class="input-group">
+		<select class="form-control" name="selectseeremotestream">
+			<option value="-">-</option>
+			{{#cameras}}
+			<option value="{{ip}}">{{ip}}</option>
+			{{/cameras}}
+		</select>
+		<div class="input-group-btn">
+			<input type="submit" class="btn btn-primary" value="See stream">
+		</div>
+	</div>
+</form>

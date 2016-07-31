@@ -1,0 +1,47 @@
+<!DOCTYPE  HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Streaming">
+		<meta name="author" content="Simon Wächter">
+		<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+		<script src="scripts/script.js"></script> 
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+		<link href="images/favicon.ico" rel="shortcut icon">
+		<link href="styles/style.css" rel="stylesheet">
+		<title>Streaming</title>
+	</head>
+	<body>
+		<div class="navbar navbar-default">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.php?page=home">Streaming</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li><a href="index.php?page=local-camera">Local camera</a></li>
+						<li><a href="index.php?page=remote-cameras">Remote cameras</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container containercontent">
+			<div id="content">
+				{{{content}}}
+			</div>
+			<div id="page-footer">
+				<div class="container">
+					<p class="text-muted credit">Simon Wächter - GNU GPL v3 <a href="https://github.com/swaechter/web-raspberrypi-streaming-en">See the project on Github</a></p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

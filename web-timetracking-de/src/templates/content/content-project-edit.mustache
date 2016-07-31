@@ -1,0 +1,14 @@
+<form id="form-project-edit" method="post">
+	<h1>Projekt bearbeiten</h1>
+	<p>Bearbeiten Sie ein bestehendes Projekt.</p>
+	<div class="form-group">
+		<label>Projekt *</label>
+		<select name="select-project" class="form-control" required>
+			<option value="0">-</option>
+			{{#projects}}
+			<option value="{{idproject}}">{{name}}</option>
+			{{/projects}}
+		</select>
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Bearbeiten</button>
+</form>

@@ -1,0 +1,18 @@
+<form id="form-project-create" method="post">
+	<h1>Projekt erstellen</h1>
+	<p>Erstellen Sie ein neues Projekt und fügen dieses automatisch zum System dazu.</p>
+	<div class="form-group">
+		<label>Name *</label>
+		<input name="name" class="form-control" type="text" maxlength="100" required>
+	</div>
+	<div class="form-group">
+		<label>Kunde *</label>
+		<select name="select-project" class="form-control" required>
+			<option value="0">-</option>
+			{{#customers}}
+			<option value="{{idcustomer}}">{{name}}</option>
+			{{/customers}}
+		</select>
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Erstellen</button>
+</form>

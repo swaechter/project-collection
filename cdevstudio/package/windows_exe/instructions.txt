@@ -1,0 +1,6 @@
+===== Install NSIS =====
+- Install NSIS
+- Add the NSIS bin directory to the PATH variable
+
+===== Binary package =====
+- Run the batch file for your compiler platform

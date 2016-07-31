@@ -1,0 +1,3 @@
+add_subdirectory(staticlibrary)
+add_subdirectory(sharedlibrary)
+add_subdirectory(testapplication)

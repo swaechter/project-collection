@@ -1,0 +1,46 @@
+Source: cdevstudio
+Section: utils
+Priority: optional
+Maintainer: Simon Wächter <waechter.simon@gmail.com>
+Build-Depends: debhelper (>= 9), cmake, qtbase5-dev
+Standards-Version: 3.9.5
+Homepage: http://github.com/swaechter/cdevstudio
+
+Package: cdevstudio
+Architecture: any
+Depends: ${shlibs:Depends},
+         ${misc:Depends},
+         libcdevstudioplatform0,
+Description: Provides CDevStudio - a C/C++ IDE based on the Qt framework
+ A modern C/C++ IDE based on the Qt5 framework that tries to provide a
+ crosscompatible tool to develop software
+
+Package: libcdevstudioplatform0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Provides the runtime functionality for CDevStudio
+ Libraries that provide the base functionality for the CDevStudio IDE
+
+Package: libcdevstudioplugins0
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Provides the plugins for CDevStudio
+ Libraries with plugins that provide the base functionality for the CDevStudio
+ IDE
+
+Package: libcdevstudioplatform-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libcdevstudioplatform0 (= ${binary:Version})
+Description: Provides the development libraries for CDevStudio
+ Libraries that provide the development functionality for the CDevStudio IDE
+
+Package: libcdevstudioplugins-dev
+Section: libdevel
+Architecture: any
+Depends: ${misc:Depends}, libcdevstudioplugins0 (= ${binary:Version})
+Description: Provides the plugin development libraries for CDevStudio
+ Libraries that provide the development functionality for the CDevStudio IDE
+ plugins

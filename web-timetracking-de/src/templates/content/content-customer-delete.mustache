@@ -1,0 +1,14 @@
+<form id="form-customer-delete" method="post">
+	<h1>Kunde löschen</h1>
+	<p>Löschen Sie einen bestehenden Kunden. Bitte beachten Sie, dass dies zu fehlerhaften Datensätzen (z.B. in Projekten und Statistiken) führen kann.</p>
+	<div class="form-group">
+		<label>Name *</label>
+		<select name="select-customer" class="form-control" required>
+			<option value="0">-</option>
+			{{#customers}}
+			<option value="{{idcustomer}}">{{name}}</option>
+			{{/customers}}
+		</select>
+	</div>
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Löschen</button>
+</form>

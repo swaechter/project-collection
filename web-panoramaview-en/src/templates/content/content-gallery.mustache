@@ -1,0 +1,18 @@
+<form id="form-select-day" method="post">
+	<h1>Gallery</h1>
+	<h2>Current image</h2>
+	<a data-lightbox="output_current" href="data/output_current.jpg">
+		<img src="data/output_current.jpg" style="max-width:650px;"></img>
+	</a>
+	<h2>Select a day</h2>
+	<div class="input-group">
+		<select class="form-control" name="select-day">
+			{{#dates}}
+			<option value="{{value}}">{{value}}</option>
+			{{/dates}}
+		</select>
+		<div class="input-group-btn">
+			<input type="submit" class="btn btn-primary" value="Show">
+		</div>
+	</div>
+</form>

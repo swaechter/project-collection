@@ -1,0 +1,18 @@
+<div class="panel-group" id="accordion">
+	{{#images}}
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapse{{value}}">{{readablevalue}}</a>
+			</h4>
+		</div>
+		<div id="collapse{{value}}" class="panel-collapse collapse">
+			<div class="panel-body">
+					<a data-lightbox="output_{{date}}_{{value}}" href="data/output_{{date}}_{{value}}.jpg">
+						<img src="data/output_{{date}}_{{value}}.jpg" alt="For this hour no picture does exist !" style="max-width:600px;">
+					</a>
+			</div>
+		</div>
+	</div>
+	{{/images}}
+</div>

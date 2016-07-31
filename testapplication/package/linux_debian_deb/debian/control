@@ -1,0 +1,12 @@
+Source: testapplication
+Maintainer: Simon Wächter <waechter.simon@gmail.com>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.5
+Build-Depends: debhelper (>= 9), cmake, qtbase5-dev, qtbase5-dev-tools
+
+Package: testapplication
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libqt5core5, libqt5widgets5, libqt5gui5
+Description: Sample test application
+ Sample Qt5 application for Linux, OS X and Windows.
