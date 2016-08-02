@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="template" client="site">
+	<name>GIBM Notebook-Shop</name>
+	<version>0.1</version>
+	<creationDate>04.03.2015</creationDate>
+	<author>Simon Wächter</author>
+	<authorEmail>waechter.simon@gmail.com</authorEmail>
+	<copyright>GNU GPL v3</copyright>
+	<description>A Joomla! template for the GIBM Notebook-Shop.</description>
+	<files>
+		<filename>index.php</filename>
+		<folder>styles</folder>
+		<folder>images</folder>
+	</files>
+	<positions>
+		<position>debug</position>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+	</positions>
+	<config>
+	</config>
+</extension>

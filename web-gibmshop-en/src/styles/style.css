@@ -1,0 +1,232 @@
+/*
+ * Site
+ */
+
+/* Reset everything */
+html, body
+{
+	margin: 0;
+	padding: 0;
+}
+
+/* Header */
+.header
+{
+	/* Height */
+	min-height: 83px;
+	max-height: 83px;
+	
+	/* Repeating image */
+	background-image: url(../images/header.png);
+	background-repeat: repeat-x;
+}
+
+/* Container */
+.container
+{
+	/* Position and width */
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+	max-width: 837px;
+	min-width: 837px;
+	
+	/* Top left corner */
+	border-top-left-radius: 70px;
+	
+	/* Shadow */
+	box-shadow: 0 0 10px #BFBFBF;
+}
+
+/* Banner */
+.banner
+{
+	/* Position and height */
+	float: right;
+	margin-top: -60px;
+	margin-bottom: 34px;
+	margin-right: 42px;
+	min-height: 188px;
+	max-height: 188px;
+}
+
+/* Navigation */
+.navigation
+{
+	/* Position and width */
+	float: left;
+	margin-left: 25px;
+	margin-right: 76px;
+	min-width: 180px;
+	max-width: 180px;
+}
+
+/* Navigation logo */
+.navigation-logo
+{
+	/* Position */
+	margin-top: 20px;
+}
+
+/* Navigation image */
+.navigation-navigation
+{
+	/* Position and height */
+	margin-top: 34px;
+	min-height: 15px;
+	max-height: 15px;
+	
+	/* Color */
+	background-color: #C9C9C9;
+}
+
+/* Content */
+.content
+{
+	/* Position and width */
+	float: left;
+	margin-right: 42px;
+	margin-bottom: 50px;
+	min-width: 514px;
+	max-width: 514px;
+}
+
+/*
+ * Styling
+ */
+
+/* Content */
+.content
+{
+	/* Styling */
+	font-size: 11pt;
+	font-family: Verdana, sans-serif;
+	
+	/* Color */
+	color: #000000;
+}
+
+/* Content title */
+.content h1
+{
+	/* Height */
+	min-height: 44px;
+	max-height:44px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	
+	/* Styling */
+	font-size: 18pt;
+	font-weight: bold;
+}
+
+/* Content paragraph */
+.content p
+{
+	/* Position */
+	margin-top: 0px;
+}
+
+/* Content list fix */
+.content ul
+{
+	list-style-position: inside;
+}
+
+/* Navigation */
+.navigation-content
+{
+	/* Styling */
+	font-family: Verdana, sans-serif;
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+/* Navigation */
+.navigation-content .nav, .nav-child
+{
+	/* Position */
+	padding-left: 0px;
+}
+
+/* Navigation */
+.navigation-content .nav
+{
+	/* Position */
+	margin-top: -1px;
+}
+
+/* Navigation links */
+.navigation-content a
+{
+	/* Remove link decoration */
+	text-decoration: none;
+}
+
+/* Navigation divider */
+.navigation-content li
+{
+	/* Height */
+	min-height: 19px;
+	
+	/* Remove the bullet points */
+	list-style-type: none;
+}
+
+/* Navigation divider */
+.navigation-content .nav li:before
+{
+	/* Position and width */
+	content: '';
+	position: absolute;
+	margin-left: -4px;
+	min-width: 180px;
+	max-width: 180px;
+	
+	/* Divider */
+	border-top: 1px solid #C9C9C9;
+}
+
+/* Navigation divider */
+.navigation-content .nav-child li:before
+{
+	/* Position and width */
+	content: '';
+	position: absolute;
+	margin-left: -15px;
+	min-width: 180px;
+	max-width: 180px;
+	
+	/* Divider */
+	border-top: 1px solid #C9C9C9;
+}
+
+/* Navigation menu */
+.navigation-content .nav li
+{
+	/* Position and height */
+	margin-left: 4px;
+	line-height: 18px;
+}
+
+/* Navigation submenu */
+.navigation-content .nav-child li
+{
+	/* Position and height */
+	margin-left: 11px;
+	line-height: 18px;
+}
+
+/* Navigation menu/submenu inactive */
+.navigation-content li a
+{
+	/* Color */
+	color: #000000;
+}
+
+/* Navigation menu/submenu active */
+.navigation-content .current > a
+{
+	/* Color */
+	color: #1D87CB;
+}
